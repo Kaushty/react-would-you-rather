@@ -1,0 +1,45 @@
+.signin {
+  border: 2px solid grey;
+  width: 50%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#signin-title {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 2px solid black;
+}
+
+.signin-box {
+  border: 2px solid grey;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.signin-box > input {
+  width: 50%;
+  padding: 5px;
+  font-size: 16px;
+  margin: 10px 0;
+  font-family: sans-serif;
+  border-radius: 10px;
+  outline: thin;
+}
+
+.signin-box > input:focus {
+  border-color: green;
+}
+
+#btn-signin {
+  width: 30%;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: rgb(118, 219, 118);
+  outline: none;
+}
