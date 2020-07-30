@@ -19,11 +19,13 @@ export function handleAddQuestion(optionOneText, optionTwoText) {
     const questionInfo = {
       optionOneText,
       optionTwoText,
-      author: authedUser,
+      author: authedUser.id,
     };
 
     return saveQuestion(questionInfo)
-      .then(function(question) { dispatch(addQuestion(question)) });
+        .then((question) => {
+          dispatch(addQuestion(question))
+        });
   };
 }
 

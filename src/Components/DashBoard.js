@@ -23,8 +23,10 @@ class DashBoard extends Component {
     }
 
     render() {
-        const answeredQuestion = Object.keys(this.props.userDetails.answers);
-        const questionKeys = Object.keys(this.props.questions)
+        const { userDetails, questions } = this.props;
+        
+        const answeredQuestion = Object.keys(userDetails.answers);
+        const questionKeys = Object.keys(questions)
         const unansweredQuestion = questionKeys.filter((question) => (
             // questions that are not in answeredQuestions
            !answeredQuestion.includes(question)

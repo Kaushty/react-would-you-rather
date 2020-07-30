@@ -12,6 +12,7 @@ import ProtectedRoute from '../Utils/ProtectedRoute'
 import Nav from './Navbar'
 import Login from './Login'
 import DashBoard from './DashBoard'
+import NewQuestion from './NewQuestion'
 
 class App extends React.Component {  
 
@@ -31,6 +32,7 @@ class App extends React.Component {
             <Nav loggedIn={loggedIn}/>
             <Switch>
               <ProtectedRoute path='/' exact component={DashBoard} loggedIn={loggedIn}/>
+              <ProtectedRoute path='/add' exact component={NewQuestion} loggedIn={loggedIn}/>
               <Route path='/login' exact component={Login} />
             </Switch>            
         </Fragment>
