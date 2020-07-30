@@ -1,6 +1,7 @@
 @import url("./new-question.css");
 @import url("./leaderboard.css");
 @import url("./signin.css");
+@import url('./Dashboard.css');
 
 body {
   margin: 0;
@@ -40,75 +41,4 @@ a {
 
 #logout:hover {
   color: red;
-}
-
-.tgl-btn {
-  font-size: 18px;
-  /* margin: 0 20px; */
-  /* border: 1px solid grey; */
-  font-weight: 600;
-  padding: 5px 10px;
-}
-
-#unanswered {
-  border-right: 1px solid grey;
-}
-
-.tgl-btn:hover {
-  transition: 0.2s all ease-in;
-  color: blue;
-}
-
-.tgl-btn:focus {
-  background-color: blanchedalmond;
-}
-
-.questions {
-  margin: 0 auto;
-  border: 2px solid grey;
-  width: 50%;
-  text-align: center;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: aliceblue;
-}
-
-.question-list {
-  margin-top: 10px;
-  border: 2px solid gray;
-  border-radius: 10px;
-}
-
-#profile-pic {
-  border-radius: 50%;
-  padding: 10px;
-  width: 130px;
-}
-
-.question-body {
-  display: flex;
-  /* background-color: antiquewhite; */
-  justify-content: space-evenly;
-}
-
-.question-details {
-  padding: 10px;
-}
-
-.question-details h4 {
-  font-size: 16px;
-  margin: 5px 0;
-}
-
-#btn-poll {
-  border-radius: 10px;
-  padding: 10px;
-  font-size: 16px;
-  font-family: "Helvetica Neue";
-  outline: none;
-  width: 100%;
-}
-
-#btn-poll:active {
-  background-color: blanchedalmond;
 }

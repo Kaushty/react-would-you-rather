@@ -4,7 +4,6 @@ import { NavLink, Redirect } from "react-router-dom";
 
 function Nav (props) {
     // Navbar Component
-    console.log(props)
     const { loggedIn, userDetails} = props;
 
     if(!loggedIn) {
@@ -31,8 +30,7 @@ function Nav (props) {
           <li>
               <NavLink id="logout" to="/login">Logout</NavLink>
             </li>
-        </ul>
-        {/* <Redirect to='/' /> */}
+        </ul>        
       </div>
     )
 }

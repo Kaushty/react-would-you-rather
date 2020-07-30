@@ -52,8 +52,6 @@ class Login extends React.Component {
         
         if(this.state.toHome) {
             const redirect = history.location.state;
-            console.log(redirect)
-            console.log(history)
             if (redirect != null) {
               return <Redirect to={redirect} push={true} />
             }

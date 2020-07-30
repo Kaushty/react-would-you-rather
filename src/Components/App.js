@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 // import '../Styles/App.css';
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-// import LoadingBar from 'react-redux-loading-bar'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import '../Styles/root_style.css';
 import {connect} from 'react-redux'
+import { LoadingBar } from 'react-redux-loading-bar';
 
 import { handleInitialData } from '../Actions/shared'
 
@@ -12,7 +12,6 @@ import ProtectedRoute from '../Utils/ProtectedRoute'
 import Nav from './Navbar'
 import Login from './Login'
 import DashBoard from './DashBoard'
-import { LoadingBar } from 'react-redux-loading-bar';
 
 class App extends React.Component {  
 
@@ -23,18 +22,18 @@ class App extends React.Component {
 
   render() {
 
-    const {users, authedUser, loggedIn} = this.props;
+    const {loggedIn} = this.props;
     return(
       <Router >
-        <div>
+        <Fragment>
           <LoadingBar />
           <h1 className='app-title'>Would You Rather ?</h1>         
             <Nav loggedIn={loggedIn}/>
             <Switch>
-              <ProtectedRoute path='/' exact Component={DashBoard} loggedIn={loggedIn}/>
+              <ProtectedRoute path='/' exact component={DashBoard} loggedIn={loggedIn}/>
               <Route path='/login' exact component={Login} />
             </Switch>            
-        </div>
+        </Fragment>
       </Router>
     )
   }
