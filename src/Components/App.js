@@ -12,11 +12,13 @@ import ProtectedRoute from '../Utils/ProtectedRoute'
 import Nav from './Navbar'
 import Login from './Login'
 import DashBoard from './DashBoard'
+import { LoadingBar } from 'react-redux-loading-bar';
 
 class App extends React.Component {  
 
-  async componentDidMount() {
-    await this.props.dispatch(handleInitialData());
+  componentDidMount() {
+    const { dispatch } = this.props;    
+    dispatch(handleInitialData());
   }
 
   render() {
@@ -25,6 +27,7 @@ class App extends React.Component {
     return(
       <Router >
         <div>
+          <LoadingBar />
           <h1 className='app-title'>Would You Rather ?</h1>         
             <Nav loggedIn={loggedIn}/>
             <Switch>

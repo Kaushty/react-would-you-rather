@@ -2,7 +2,7 @@ import React from 'react';
 
 import { connect } from 'react-redux'
 import { Redirect, withRouter } from 'react-router-dom';
-// import { showLoading } from 'react-redux-loading-bar';
+import { showLoading } from 'react-redux-loading-bar';
 
 import { setAuthedUser, clearAuthedUser } from '../Actions/authedUser';
 
@@ -43,13 +43,11 @@ class Login extends React.Component {
 
     render() {
 
-        const {users, loading, history} = this.props;
+        const {users, loading, dispatch, history} = this.props;
 
         if(loading || !users){
-            // dispatch(showLoading());
-            return(
-                <div></div>
-            )
+            dispatch(showLoading());
+            
         }
         
         if(this.state.toHome) {
@@ -59,7 +57,7 @@ class Login extends React.Component {
             if (redirect != null) {
               return <Redirect to={redirect} push={true} />
             }
-            return <Redirect path='/' />
+            return <Redirect to='/' />
           }
 
         return(
