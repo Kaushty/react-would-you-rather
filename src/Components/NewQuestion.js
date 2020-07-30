@@ -16,7 +16,6 @@ class NewQuestion extends React.Component {
         event.preventDefault();
         const optionOne = document.getElementById('opt1').value;
         const optionTwo = document.getElementById('opt2').value;
-        const redirect = this.props.history.location.state;
 
         if( optionOne && optionTwo){
             this.props.dispatch(handleAddQuestion(optionOne, optionTwo))  

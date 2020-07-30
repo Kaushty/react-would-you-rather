@@ -33,7 +33,10 @@ class DashBoard extends Component {
         ));
         const {showQuestions} = this.state;
 
-        const finQuestions = showQuestions === 'unanswered' ? unansweredQuestion : answeredQuestion;
+        let finQuestions = showQuestions === 'unanswered' ? unansweredQuestion : answeredQuestion;
+        finQuestions = finQuestions.sort((a,b) => 
+            questions[b].timestamp - questions[a].timestamp
+        )
 
         return (
             <div className="questions">
