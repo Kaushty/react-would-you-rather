@@ -9,8 +9,7 @@ function Nav (props) {
 
     if(!loggedIn) {
        return (
-        //    <Redirect to='/login'/>
-        <div></div>
+           <Redirect to='/login'/>
        )
     }
     
@@ -33,6 +32,7 @@ function Nav (props) {
               <NavLink id="logout" to="/login">Logout</NavLink>
             </li>
         </ul>
+        {/* <Redirect to='/' /> */}
       </div>
     )
 }

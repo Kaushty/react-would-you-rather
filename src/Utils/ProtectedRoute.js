@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Redirect, withRouter } from 'react-router-dom';
-/*
+
 function ProtectedRoute({ component: Component, ...rest }) {
   const redirect = rest.location.pathname;
 
@@ -19,7 +19,9 @@ function ProtectedRoute({ component: Component, ...rest }) {
 }
 
 export default withRouter(ProtectedRoute);
-*/
+
+
+/*
 const ProtectedRoute = ({component: Component, loggedIn, ...rest}) => (
   <Route
       {...rest}
@@ -35,3 +37,4 @@ const ProtectedRoute = ({component: Component, loggedIn, ...rest}) => (
 );
 
 export default ProtectedRoute;
+*/

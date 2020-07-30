@@ -1,9 +1,12 @@
 import React, { Fragment } from 'react';
 // import '../Styles/App.css';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+// import LoadingBar from 'react-redux-loading-bar'
+
 import '../Styles/root_style.css';
 import {connect} from 'react-redux'
+
 import { handleInitialData } from '../Actions/shared'
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 import ProtectedRoute from '../Utils/ProtectedRoute'
 import Nav from './Navbar'
@@ -12,9 +15,8 @@ import DashBoard from './DashBoard'
 
 class App extends React.Component {  
 
-  componentDidMount() {
-    console.log(this.props)
-    this.props.dispatch(handleInitialData());
+  async componentDidMount() {
+    await this.props.dispatch(handleInitialData());
   }
 
   render() {
@@ -26,7 +28,7 @@ class App extends React.Component {
           <h1 className='app-title'>Would You Rather ?</h1>         
             <Nav loggedIn={loggedIn}/>
             <Switch>
-              <ProtectedRoute to='/' exact Component={DashBoard} loggedIn={loggedIn}/>
+              <ProtectedRoute path='/' exact Component={DashBoard} loggedIn={loggedIn}/>
               <Route path='/login' exact component={Login} />
             </Switch>            
         </div>
