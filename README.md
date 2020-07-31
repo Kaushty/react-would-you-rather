@@ -36,13 +36,13 @@ You will also see any lint errors in the console.
 
 ## Built using
 
-* React.js
-* Redux
-* Bootstrap
-* Redux-thunk
-* React-redux
-* React-redux-loading
-* Udacity's API
+* react
+* react-dom
+* redux
+* react-redux
+* react-router-dom
+* redux-thunk
+* react-redux-loading
 * create-react-app
 
 ## Author
