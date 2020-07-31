@@ -68,8 +68,9 @@ class DashBoard extends Component {
     }
 }
 
-function mapStateToProps({authedUser, questions}){
-    const { userDetails } = authedUser
+function mapStateToProps({authedUser, users, questions}){
+    const userDetails = users[authedUser.id]
+
     return {
         userDetails,
         questions,

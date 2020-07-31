@@ -2,6 +2,7 @@
 @import url("./leaderboard.css");
 @import url("./signin.css");
 @import url('./Dashboard.css');
+@import url('./PollView.css');
 
 body {
   margin: 0;
@@ -24,6 +25,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin: 20px 0;
 }
 
 .navbar-list > li,

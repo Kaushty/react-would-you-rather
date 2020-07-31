@@ -1,5 +1,5 @@
 /* @flow */
-import { saveQuestion, saveQuestionAnswer } from '../Utils/api'
+import { saveQuestion } from '../Utils/api'
 
 export const ADD_QUESTION = 'ADD_QUESTION';
 export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS';
@@ -45,17 +45,3 @@ export function answerQuestion(authedUser, qid, answer) {
   };
 }
 
-export function handleAnswerQuestion(question, answer) {
-  return function(dispatch, getState) {
-    const { authedUser } = getState();
-
-    const answerInfo = {
-      authedUser,
-      qid: question.id,
-      answer,
-    };
-
-    return saveQuestionAnswer(answerInfo)
-      .then(function() { dispatch((answerQuestion(authedUser, question, answer))) })
-  }
-}

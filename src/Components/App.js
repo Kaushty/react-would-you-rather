@@ -13,6 +13,8 @@ import Nav from './Navbar'
 import Login from './Login'
 import DashBoard from './DashBoard'
 import NewQuestion from './NewQuestion'
+import LeaderBoard from './LeaderBoard'
+import PollView from './PollView'
 
 class App extends React.Component {  
 
@@ -24,6 +26,7 @@ class App extends React.Component {
   render() {
 
     const {loggedIn} = this.props;
+
     return(
       <Router >
         <Fragment>
@@ -33,6 +36,8 @@ class App extends React.Component {
             <Switch>
               <ProtectedRoute path='/' exact component={DashBoard} loggedIn={loggedIn}/>
               <ProtectedRoute path='/add' exact component={NewQuestion} loggedIn={loggedIn}/>
+              <ProtectedRoute path='/leaderboard' exact component={LeaderBoard} loggedIn={loggedIn}/>
+              <ProtectedRoute path='/question/:id' exact component={PollView} loggedIn={loggedIn}/>
               <Route path='/login' exact component={Login} />
             </Switch>            
         </Fragment>

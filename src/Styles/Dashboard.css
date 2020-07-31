@@ -41,22 +41,26 @@
     margin: 20px 10px;
     border: 1px solid black;
     border-radius: 10px;
+    background-color: rgb(255, 255, 255);
 }
 
 #profile-pic {
     border-radius: 50%;
     padding: 10px;
-    width: 200px;
+    max-width: 200px;
 }
   
 .question-body {
     display: flex;
     /* background-color: antiquewhite; */
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
 }
   
 .question-details {
     padding: 10px;
+    max-width: 300px;
 }
   
 .question-details h4 {
@@ -74,7 +78,6 @@
     background-color: rgb(113, 228, 113);
     font-family: "Helvetica Neue";
     outline: none;
-    width: 100%;
 }
   
 #btn-poll:active {
