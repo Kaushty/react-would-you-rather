@@ -19,7 +19,6 @@ class DashBoard extends Component {
         this.setState({
             showQuestions: tglTab,
         })
-
     }
 
     render() {

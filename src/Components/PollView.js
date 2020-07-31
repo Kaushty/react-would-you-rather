@@ -1,8 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import { handleAnswerQuestion } from '../Actions/shared';
 import { Redirect } from 'react-router-dom';
-// import { Link } from 'react-router-dom'
+import { handleAnswerQuestion } from '../Actions/shared';
 
 class PollView extends React.Component {
 

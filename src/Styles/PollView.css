@@ -30,8 +30,14 @@
     padding: 10px;
 }
 
+#user-name {
+    font-size: 18px;
+    margin: 10px;
+}
+
 .poll-question-details h4 {
     margin: 10px 0;
+    font-size: 18px;
     font-weight: 700;
 }
 

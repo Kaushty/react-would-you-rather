@@ -3,6 +3,7 @@
 @import url("./signin.css");
 @import url('./Dashboard.css');
 @import url('./PollView.css');
+@import url('./PollResult.css');
 
 body {
   margin: 0;
