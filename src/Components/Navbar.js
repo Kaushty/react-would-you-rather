@@ -15,14 +15,14 @@ function Nav (props) {
     return (
     <div className="navbar">
         <ul className="navbar-list">
-          <li className='nav-item' id="home">
-              <NavLink to="/" exact activeClassName='active'>Home</NavLink>
+          <li id="home">
+              <NavLink className='nav-item' to="/" exact activeClassName='active'>Home</NavLink>
             </li>
-          <li className='nav-item' id="new">
-              <NavLink to="/add" exact activeClassName='active'>New Question</NavLink>
+          <li  id="new">
+              <NavLink className='nav-item' to="/add" exact activeClassName='active'>New Question</NavLink>
             </li>
-          <li className='nav-item' id="leaderboard">
-              <NavLink to="/leaderboard" exact activeClassName='active'>Leaderboard</NavLink>
+          <li id="leaderboard">
+              <NavLink className='nav-item' to="/leaderboard" exact activeClassName='active'>Leaderboard</NavLink>
             </li>
           <li>Hello, 
               <span id="authuser"> {userDetails.name} </span>

@@ -45,7 +45,7 @@ class PollView extends React.Component {
                         <p id='optionOne'
                             onClick={(e) => this.handleOptionClick(e)}
                         >{question.optionOne.text}</p>
-
+                        <h4>or</h4>
                         <p id='optionTwo'
                             onClick={(e) => this.handleOptionClick(e)}                    
                         >{question.optionTwo.text}</p>
