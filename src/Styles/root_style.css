@@ -37,11 +37,29 @@ a {
   font-size: 16px;
 }
 
+.nav-item {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.nav-item:hover {
+  background-color: silver;
+}
+
+.active {
+  background-color: rgba(165, 159, 159, 0.877);
+}
+
 #authuser {
   font-size: 18px;
   color: brown;
 }
 
+#logout {
+  padding: 10px;
+  border-radius: 10px;
+}
+
 #logout:hover {
-  color: red;
+  background-color: rgb(230, 132, 132);
 }

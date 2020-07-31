@@ -6,10 +6,6 @@
     font-weight: 600;
     padding: 5px 10px;
 }
-
-.active {
-    background-color: blanchedalmond;
-}
   
 #unanswered {
     border-right: 1px solid grey;

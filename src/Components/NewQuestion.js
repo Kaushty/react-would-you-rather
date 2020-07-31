@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import { handleAddQuestion } from '../Actions/questions';
+import { handleAddQuestion } from '../Actions/shared';
 import { Redirect } from 'react-router';
 
 class NewQuestion extends React.Component {  

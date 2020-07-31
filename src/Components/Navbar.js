@@ -15,19 +15,19 @@ function Nav (props) {
     return (
     <div className="navbar">
         <ul className="navbar-list">
-          <li id="home">
-              <NavLink to="/">Home</NavLink>
+          <li className='nav-item' id="home">
+              <NavLink to="/" exact activeClassName='active'>Home</NavLink>
             </li>
-          <li id="new">
-              <NavLink to="/add">New Question</NavLink>
+          <li className='nav-item' id="new">
+              <NavLink to="/add" exact activeClassName='active'>New Question</NavLink>
             </li>
-          <li id="leaderboard">
-              <NavLink to="/leaderboard">Leaderboard</NavLink>
+          <li className='nav-item' id="leaderboard">
+              <NavLink to="/leaderboard" exact activeClassName='active'>Leaderboard</NavLink>
             </li>
           <li>Hello, 
               <span id="authuser"> {userDetails.name} </span>
             </li>
-          <li>
+          <li >
               <NavLink id="logout" to="/login">Logout</NavLink>
             </li>
         </ul>        
