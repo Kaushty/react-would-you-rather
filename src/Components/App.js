@@ -32,7 +32,7 @@ class App extends React.Component {
     return(
       <Router >
         <Fragment>
-          <LoadingBar />
+        <LoadingBar loading={this.props.loading} />
           <h1 className='app-title'>Would You Rather ?</h1>         
             <Nav loggedIn={loggedIn}/>
             <Switch>
@@ -50,11 +50,14 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = ({ users, authedUser }) => {
+const mapStateToProps = ({users, authedUser, ...loadingBar}) => {
+  console.log(loadingBar.loadingBar.default)
+
   return {
     users,
     authedUser,
     loggedIn: authedUser.id ? true : false,
+    loading: loadingBar.loadingBar.default,
   }
 }
 
