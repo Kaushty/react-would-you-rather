@@ -1,7 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+
 import { handleAnswerQuestion } from '../Actions/shared';
+
+import FourZeroFour from './ErrorComponent'
 
 class PollView extends React.Component {
 
@@ -23,14 +26,19 @@ class PollView extends React.Component {
     }
 
     render() {
-        const {author, question } = this.props;
-
+        const {author, question, pageNotFound } = this.props;
+        
+        if(pageNotFound) {
+            return <FourZeroFour />
+        }
+        
         if(this.state.toResult){
             return(
                 <Redirect to={`/question/${question.id}/result`} />
             )
         }
         
+
         return(
             <div className="poll-view">
                 <h4 id="user-name">{author.name} asks</h4>
@@ -58,8 +66,15 @@ class PollView extends React.Component {
 
 function mapStateToProps({authedUser, users, questions},ownProps) {
     const quesID = ownProps.match.params.id;
-    const author = users[questions[quesID].author]
+    let pageNotFound = true;
+    let author = '';
+
+    if(questions[quesID]) {
+        author = users[questions[quesID].author];
+        pageNotFound = false;
+    }
     return {
+        pageNotFound,
         authedUser: authedUser.userDetails,
         author,
         question: questions[quesID],

@@ -16,6 +16,7 @@ import NewQuestion from './NewQuestion'
 import LeaderBoard from './LeaderBoard'
 import PollView from './PollView'
 import PollViewResult from './PollViewResult';
+import FourZeroFour from './ErrorComponent'
 
 class App extends React.Component {  
 
@@ -41,6 +42,7 @@ class App extends React.Component {
               <ProtectedRoute path='/question/:id' exact component={PollView} loggedIn={loggedIn}/>
               <ProtectedRoute path='/question/:id/result' exact component={PollViewResult} loggedIn={loggedIn} />
               <Route path='/login' exact component={Login} />
+              <Route component={FourZeroFour} />
             </Switch>            
         </Fragment>
       </Router>
