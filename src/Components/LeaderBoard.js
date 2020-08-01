@@ -3,7 +3,14 @@ import { connect } from 'react-redux'
 
 function LeaderBoard (props) {
     const { users } = props;
-    const userCount = Object.keys(users);
+    let userCount = Object.keys(users);
+    userCount = userCount.sort((a,b) => {
+        const userA = Object.keys(users[a].answers).length + users[a].questions.length;
+        const userB = Object.keys(users[b].answers).length + users[b].questions.length;
+
+        return userB - userA
+    })
+
     return(        
         <div className="leaderboard">
             <h2 id="ldr-brd-title">LeaderBoard</h2>
